@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5ed5c500-7701-44db-a0a9-84bef4d9bf0e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZUmYo7HO8q9g96TbgN7voSBfPr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="MySQL" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DDAMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DDAMain" />
+      <module name="DDA_Project" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DDAMain" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ed5c500-7701-44db-a0a9-84bef4d9bf0e" name="Default Changelist" comment="" />
+      <created>1584902096656</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584902096656</updated>
+      <workItem from="1584902097968" duration="4961000" />
+      <workItem from="1584988317734" duration="3301000" />
+      <workItem from="1584992134271" duration="540000" />
+      <workItem from="1585068116113" duration="2924000" />
+      <workItem from="1585072369462" duration="5218000" />
+      <workItem from="1585245607543" duration="491000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="91" key="#Project_Structure" timestamp="1584902105238">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state x="320" y="91" key="#Project_Structure/0.23.1440.806@0.23.1440.806" timestamp="1584902105238" />
+    <state x="184" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584903180596">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state x="184" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.806@0.23.1440.806" timestamp="1584903180596" />
+    <state x="424" y="173" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1585083838639">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state x="424" y="173" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.806@0.23.1440.806" timestamp="1585083838639" />
+    <state x="482" y="149" key="DetectedRootsChooserDialog" timestamp="1584903376397">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state x="482" y="149" key="DetectedRootsChooserDialog/0.23.1440.806@0.23.1440.806" timestamp="1584903376397" />
+    <state width="1358" height="194" key="GridCell.Tab.0.bottom" timestamp="1585087998920">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state width="1358" height="194" key="GridCell.Tab.0.bottom/0.23.1440.806@0.23.1440.806" timestamp="1585087998920" />
+    <state width="1358" height="194" key="GridCell.Tab.0.center" timestamp="1585087998919">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state width="1358" height="194" key="GridCell.Tab.0.center/0.23.1440.806@0.23.1440.806" timestamp="1585087998919" />
+    <state width="1358" height="194" key="GridCell.Tab.0.left" timestamp="1585087998918">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state width="1358" height="194" key="GridCell.Tab.0.left/0.23.1440.806@0.23.1440.806" timestamp="1585087998918" />
+    <state width="1358" height="194" key="GridCell.Tab.0.right" timestamp="1585087998919">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state width="1358" height="194" key="GridCell.Tab.0.right/0.23.1440.806@0.23.1440.806" timestamp="1585087998919" />
+    <state width="234" height="457" key="HiddenNamespacesPopup" timestamp="1584903203347">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state width="234" height="457" key="HiddenNamespacesPopup/0.23.1440.806@0.23.1440.806" timestamp="1584903203347" />
+    <state x="208" y="23" key="SettingsEditor" timestamp="1584903384028">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state x="208" y="23" key="SettingsEditor/0.23.1440.806@0.23.1440.806" timestamp="1584903384028" />
+    <state x="432" y="327" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584902123024">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state x="432" y="327" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1440.806@0.23.1440.806" timestamp="1584902123024" />
+    <state x="511" y="155" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584992161593">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state x="511" y="155" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1440.806@0.23.1440.806" timestamp="1584992161593" />
+    <state x="397" y="153" width="670" height="676" key="search.everywhere.popup" timestamp="1584988726963">
+      <screen x="0" y="23" width="1440" height="806" />
+    </state>
+    <state x="397" y="153" width="670" height="676" key="search.everywhere.popup/0.23.1440.806@0.23.1440.806" timestamp="1584988726963" />
+  </component>
+</project>

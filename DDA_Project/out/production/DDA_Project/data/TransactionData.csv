@@ -1,0 +1,151 @@
+TransactionNo,AccountNo,Amount,TransactionType,DateOfTransaction,TransactionLocation
+1,8,-127.45,check,2020/02/07,Electricity Bill
+2,95,-109.0,debit,2020/02/21,Gas Bill
+3,92,-299.18,debit,2020/02/20,Target
+4,72,-140.71,check,2020/02/06,Rent
+5,21,-117.25,debit,2020/02/26,Electricity Bill
+6,44,-231.9,credit,2020/02/17,Electricity Bill
+7,72,-23.78,check,2020/02/17,Rent
+8,75,-253.81,credit,2020/02/29,Miscellaneous
+9,29,-18.91,credit,2020/02/08,Grocery Store
+10,47,-65.89,check,2020/02/11,Grocery Store
+11,65,-281.7,debit,2020/02/29,CVS
+12,1,-115.9,credit,2020/02/27,Target
+13,44,-255.0,debit,2020/02/16,CVS
+14,60,-193.95,check,2020/02/23,Target
+15,1,-27.82,credit,2020/02/04,CVS
+16,56,-266.14,credit,2020/02/22,CVS
+17,39,-260.97,check,2020/02/16,Walmart
+18,82,-176.66,debit,2020/02/21,Miscellaneous
+19,58,-233.87,debit,2020/02/05,Target
+20,12,-85.35,credit,2020/02/28,Drug Store
+21,28,-80.6,debit,2020/02/18,Walmart
+22,13,-73.18,check,2020/02/08,Target
+23,40,-146.57,credit,2020/02/15,Rent
+24,21,-164.83,debit,2020/02/18,Grocery Store
+25,56,-231.33,debit,2020/02/12,Miscellaneous
+26,98,-261.6,debit,2020/02/22,Drug Store
+27,43,-238.08,credit,2020/02/12,Gas Bill
+28,18,-104.59,credit,2020/02/06,Miscellaneous
+29,20,-32.18,check,2020/02/12,Walmart
+30,5,-174.65,check,2020/02/19,Gas Bill
+31,42,-40.11,check,2020/02/02,Walmart
+32,72,-164.05,debit,2020/02/24,Grocery Store
+33,53,-195.16,check,2020/02/27,Miscellaneous
+34,51,-146.9,debit,2020/02/09,Target
+35,34,-60.06,debit,2020/02/09,Water Bill
+36,30,-68.75,credit,2020/02/02,Drug Store
+37,37,-65.0,check,2020/02/08,Miscellaneous
+38,48,-77.71,credit,2020/02/07,Electricity Bill
+39,50,-157.85,credit,2020/02/14,Water Bill
+40,87,-90.4,check,2020/02/16,Water Bill
+41,79,-255.5,check,2020/02/20,Grocery Store
+42,4,-119.62,debit,2020/02/05,Electricity Bill
+43,49,-26.26,debit,2020/02/14,Grocery Store
+44,81,-101.77,debit,2020/02/18,Drug Store
+45,66,-112.43,check,2020/02/24,Rent
+46,40,-107.66,credit,2020/02/17,Gas Bill
+47,29,-252.79,check,2020/02/22,Grocery Store
+48,59,-287.8,check,2020/02/14,Target
+49,94,-36.53,debit,2020/02/07,Target
+50,36,-286.99,credit,2020/02/11,Grocery Store
+51,72,-274.23,credit,2020/02/25,Walmart
+52,16,-71.97,credit,2020/02/06,Water Bill
+53,24,-45.24,credit,2020/02/11,Electricity Bill
+54,99,-54.18,debit,2020/02/21,Target
+55,11,-277.83,credit,2020/02/07,Gas Bill
+56,80,-161.36,debit,2020/02/04,Rent
+57,47,-201.49,debit,2020/02/11,Grocery Store
+58,58,-46.29,check,2020/02/26,Walmart
+59,45,-177.17,check,2020/02/21,Electricity Bill
+60,31,-157.88,credit,2020/02/12,CVS
+61,14,-120.33,credit,2020/02/20,Electricity Bill
+62,26,-296.57,check,2020/02/20,Walmart
+63,55,-207.3,credit,2020/02/23,CVS
+64,44,-288.27,credit,2020/02/11,Drug Store
+65,33,-53.68,check,2020/02/22,Walmart
+66,38,-284.07,debit,2020/02/19,Walmart
+67,86,-173.77,debit,2020/02/05,Target
+68,79,-297.96,check,2020/02/09,Gas Bill
+69,13,-50.76,credit,2020/02/28,Target
+70,67,-63.01,check,2020/02/01,CVS
+71,69,-244.72,debit,2020/02/29,Drug Store
+72,91,-172.94,debit,2020/02/23,Miscellaneous
+73,94,-259.74,debit,2020/02/21,Gas Bill
+74,71,-166.13,credit,2020/02/15,Drug Store
+75,88,-276.51,debit,2020/02/26,Miscellaneous
+76,24,-52.39,check,2020/02/27,Grocery Store
+77,78,-109.28,debit,2020/02/04,Drug Store
+78,55,-298.79,credit,2020/02/19,Miscellaneous
+79,55,-67.95,check,2020/02/19,Drug Store
+80,14,-164.99,credit,2020/02/17,Water Bill
+81,66,-248.5,check,2020/02/22,Target
+82,5,-142.25,debit,2020/02/21,Drug Store
+83,30,-129.52,check,2020/02/09,Grocery Store
+84,81,-62.66,credit,2020/02/14,Miscellaneous
+85,32,-258.64,credit,2020/02/28,CVS
+86,31,-30.23,debit,2020/02/13,Miscellaneous
+87,45,-82.25,credit,2020/02/13,Grocery Store
+88,89,-138.42,credit,2020/02/19,Gas Bill
+89,71,-287.48,check,2020/02/06,Gas Bill
+90,77,-24.54,debit,2020/02/17,Rent
+91,93,-16.23,check,2020/02/07,CVS
+92,44,-250.98,credit,2020/02/25,Drug Store
+93,92,-81.49,debit,2020/02/07,Rent
+94,43,-202.67,credit,2020/02/25,Miscellaneous
+95,80,-79.35,debit,2020/02/06,Electricity Bill
+96,51,-218.41,credit,2020/02/16,Grocery Store
+97,18,-201.78,credit,2020/02/08,Grocery Store
+98,99,-240.64,check,2020/02/27,Miscellaneous
+99,54,-47.61,check,2020/02/05,Grocery Store
+100,88,-268.16,check,2020/02/02,Rent
+101,72,-192.84,credit,2020/02/24,Water Bill
+102,36,-121.93,check,2020/02/15,Target
+103,78,-95.14,check,2020/02/18,Drug Store
+104,99,-82.88,credit,2020/02/04,Rent
+105,2,-278.57,debit,2020/02/18,Gas Bill
+106,47,-284.48,credit,2020/02/19,Miscellaneous
+107,76,-30.49,check,2020/02/12,Grocery Store
+108,30,-202.12,debit,2020/02/07,Grocery Store
+109,20,-291.62,debit,2020/02/12,CVS
+110,76,-204.98,check,2020/02/10,Walmart
+111,20,-295.69,check,2020/02/07,Electricity Bill
+112,14,-208.12,credit,2020/02/09,Drug Store
+113,88,-243.23,check,2020/02/06,Rent
+114,87,-210.48,check,2020/02/29,Grocery Store
+115,4,-220.89,credit,2020/02/16,Water Bill
+116,61,-123.86,debit,2020/02/06,Grocery Store
+117,23,-195.7,debit,2020/02/23,Electricity Bill
+118,73,-21.3,debit,2020/02/17,Electricity Bill
+119,79,-179.43,check,2020/02/20,Rent
+120,88,-49.32,credit,2020/02/09,Grocery Store
+121,18,-35.23,credit,2020/02/06,Rent
+122,39,-197.43,check,2020/02/26,CVS
+123,76,-122.37,credit,2020/02/22,Target
+124,45,-40.02,check,2020/02/10,Grocery Store
+125,28,-277.79,debit,2020/02/25,Grocery Store
+126,86,-232.33,credit,2020/02/03,CVS
+127,4,-225.63,debit,2020/02/28,Rent
+128,33,-103.25,check,2020/02/27,Grocery Store
+129,58,-56.03,credit,2020/02/04,Rent
+130,49,-134.35,credit,2020/02/15,Water Bill
+131,6,-21.75,check,2020/02/11,Rent
+132,43,-184.33,credit,2020/02/28,Rent
+133,19,-40.0,debit,2020/02/10,Target
+134,92,-232.72,check,2020/02/05,Water Bill
+135,73,-85.21,check,2020/02/11,Miscellaneous
+136,62,-286.52,debit,2020/02/19,Drug Store
+137,38,-191.34,debit,2020/02/04,Electricity Bill
+138,11,-55.38,credit,2020/02/04,Water Bill
+139,72,-90.22,credit,2020/02/06,Walmart
+140,69,-246.37,debit,2020/02/23,Drug Store
+141,47,-99.19,check,2020/02/04,Miscellaneous
+142,18,-196.16,check,2020/02/23,Drug Store
+143,8,-33.41,credit,2020/02/10,Drug Store
+144,18,-95.22,credit,2020/02/16,Gas Bill
+145,48,-44.98,check,2020/02/10,Electricity Bill
+146,54,-95.82,debit,2020/02/11,Grocery Store
+147,24,-188.35,debit,2020/02/22,Drug Store
+148,79,-58.8,credit,2020/02/21,Rent
+149,50,-192.21,debit,2020/02/04,Electricity Bill
+150,13,-122.85,check,2020/02/14,CVS
