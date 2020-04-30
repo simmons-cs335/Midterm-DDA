@@ -1,1 +1,151 @@
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class AccountTest {
+
+    private DDADAO fakedb;
+    private Account test;
+    private ArrayList<String[]> accounts;
+    private ArrayList<String[]> customers;
+    private ArrayList<String[]> transactions;
+    private ArrayList<String[]> advices;
+
+    @BeforeEach
+    void setUp() {
+
+        customers = new ArrayList<String[]>();
+        String[] customer1 ={"1","Mitchell", "Teaz", "008 Rutledge Crossing"};
+        customers.add(0, customer1);
+
+        accounts = new ArrayList<String[]>();
+        String[] account1 = {"1", "1", "standard", "93416"};
+        accounts.add(0,account1);
+
+        transactions = new ArrayList<String[]>();
+        String[] transaction1 = {"1", "1", "-127", "check", "2020-03-07", "electricity bill"};
+        transactions.add(0,transaction1);
+        String[] transaction2 = {"2", "1", "125", "credit", "2020-03-14", "income"};
+        transactions.add(0, transaction2);
+
+        advices= new ArrayList<String[]>();
+        String[] advice1 ={"1", "1", "-15", "overdraft fee", "2020-03-01"};
+        advices.add(0,advice1);
+        String[] advice2 = {"2","1","-25","overdraft fee","2020-03-04"};
+        advices.add(1, advice2);
+
+
+        fakedb = new DDADAO(accounts, advices, customers, transactions);
+        test = new Account (1, fakedb);
+    }
+
+    @Test
+    void produceStatement() {
+        String statement = "";
+        assertEquals(0, statement.length());
+        statement = test.produceStatement();
+        String expectedStatement = "Transactions:\n2020-03-14 >> 125 >> credit >> income >> \n2020-03-07 >>" +
+                " -127 >> check >> electricity bill >> \nAdvices:\n-15 >> overdraft fee >> 2020-03-01 >> " +
+                "\n-25 >> overdraft fee >> 2020-03-04 >> ";
+        assertEquals(expectedStatement, statement);
+    }
+
+    @Test
+    void formatTransactionStatement(){
+        String statement = "";
+        ArrayList<String> transaction1 = new ArrayList<>();
+
+        assertEquals("", test.formatTransactionStatement(transaction1,statement));
+
+        transaction1.add("-15");
+        transaction1.add("electricity bill");
+        transaction1.add("credit");
+        transaction1.add("2020-03-14");
+
+        statement = test.formatTransactionStatement(transaction1,statement);
+
+        String expectedStatement = "\n-15 >> electricity bill >> credit >> 2020-03-14 >> ";
+        assertEquals(expectedStatement, statement);
+
+    }
+
+    @Test
+    void formatAdviceStatement(){
+       String statement = "";
+       ArrayList<String> advice1 = new ArrayList<>();
+
+       assertEquals("", test.formatAdviceStatement(advice1,statement));
+
+       advice1.add("-15");
+       advice1.add("overdraft fee");
+       advice1.add("2020-03-14");
+
+       statement = test.formatAdviceStatement(advice1,statement);
+
+       String expectedStatement = "\n-15 >> overdraft fee >> 2020-03-14 >> ";
+       assertEquals(expectedStatement, statement);
+
+    }
+
+    @Test
+    void formatStartDateEarly() {
+        assertEquals("2020-01-01", test.formatStartDate(1,2020));
+        //for the if statement(month earlier than 10)
+    }
+
+    @Test
+    void formatStartDateLate(){
+        assertEquals("2020-11-01", test.formatStartDate(11,2020));
+        //for the else statement(month later than 10)
+    }
+
+    @Test
+    void formatEndDateEarly() {
+        assertEquals("2020-01-31", test.formatEndDate(1,2020,"31"));
+        //for when month is less than 10
+    }
+
+    @Test
+    void formatEndDateLate(){
+        assertEquals ("2020-11-31", test.formatEndDate(11,2020, "31"));
+        //for when month is greater than 10
+    }
+
+    @Test
+    void lastDayOfMonth() {
+        assertEquals("28", test.lastDayOfMonth(1));
+    }
+
+    @Test
+    void getAccountNumber() {
+        assertEquals(1, test.getAccountNumber());
+    }
+
+    @Test
+    void getAccountType() {
+        assertEquals("standard", test.getAccountType());
+    }
+
+    @Test
+    void getBalance() {
+        assertEquals(93416, test.getBalance());
+    }
+
+    @Test
+    void getFirstName() {
+        assertEquals("Teaz", test.getFirstName());
+    }
+
+    @Test
+    void getLastName() {
+        assertEquals("Mitchell", test.getLastName());
+    }
+
+    @Test
+    void getAddress() {
+        assertEquals("008 Rutledge Crossing", test.getAddress());
+    }
+}
