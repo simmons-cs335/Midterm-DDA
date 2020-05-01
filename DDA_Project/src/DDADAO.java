@@ -56,39 +56,39 @@ public class DDADAO {
 
     /**
      * gets current balance for individual account
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param accountno the account number for the account that is being accessed
      *
      * @return int value of the balance for that accountno
      */
-    public int getBalance(int accountno) {
-        if (useRealDB == true) {
-            int amount = 0;
+    public double getBalance(int accountno) {
+        if (useRealDB) {
+            double amount = 0;
             try {
                 Statement checkBalance = connection.createStatement();
                 ResultSet rs = checkBalance.executeQuery(
                         "SELECT Balance FROM ACCOUNTS WHERE AccountNo = " + accountno + ";");
                 rs.next();
-                amount = rs.getInt("Balance");
+                amount = rs.getDouble("Balance");
             } catch (Exception e) {
                 e.printStackTrace();
             }
             return amount;
         } else {
-            return (int) Integer.parseInt(fakeDBACCOUNTS.get(accountno)[3]);
+            return Double.parseDouble(fakeDBACCOUNTS.get(accountno-1)[3]);
         }
     }
 
     /**
      * change balance for individual account with withdrawal or deposit
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param accountno the account number for the account that is being accessed
      * @param amount the new value for the balance of the account after the transaction has been calculated
      */
     public void updateBalance(int accountno, double amount) {
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement updateBalance = connection.createStatement();
                 updateBalance.execute(
@@ -97,13 +97,13 @@ public class DDADAO {
                 e.printStackTrace();
             }
         } else {
-            fakeDBACCOUNTS.get(accountno)[3] = Double.toString(amount);
+            fakeDBACCOUNTS.get(accountno-1)[3] = Double.toString(amount);
         }
     }
 
     /**
      * return transaction type for individual transaction
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param transactionno the number used to identify a single transaction
      *
@@ -111,7 +111,7 @@ public class DDADAO {
      */
     public String getTransactionType(int transactionno) {
         String type = "null";
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement getTransactiontype = connection.createStatement();
                 ResultSet rs = getTransactiontype.executeQuery(
@@ -122,13 +122,13 @@ public class DDADAO {
             }
             return type;
         } else {
-            return fakeDBTRANSACTIONS.get(transactionno)[3];
+            return fakeDBTRANSACTIONS.get(transactionno-1)[3];
         }
     }
 
     /**
      * returns transaction amount for individual transaction
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param transactionno the number used to identify a single transaction
      *
@@ -136,7 +136,7 @@ public class DDADAO {
      */
     public int getTransactionAmount(int transactionno) {
         int transactionamount = 0;
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement getTransactionamount = connection.createStatement();
                 ResultSet rs = getTransactionamount.executeQuery(
@@ -147,13 +147,13 @@ public class DDADAO {
             }
             return transactionamount;
         } else {
-            return Integer.parseInt(fakeDBTRANSACTIONS.get(transactionno)[2]);
+            return Integer.parseInt(fakeDBTRANSACTIONS.get(transactionno-1)[2]);
         }
     }
 
     /**
      * returns transaction date for individual transaction
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param transactionno the number used to identify a single transaction
      *
@@ -161,7 +161,7 @@ public class DDADAO {
      */
     public String getTransactionDate(int transactionno) {
         String transactiondate = "null";
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement getTransactiondate = connection.createStatement();
                 ResultSet rs = getTransactiondate.executeQuery(
@@ -174,13 +174,13 @@ public class DDADAO {
             }
             return transactiondate;
         } else {
-            return fakeDBTRANSACTIONS.get(transactionno)[4];
+            return fakeDBTRANSACTIONS.get(transactionno-1)[4];
         }
     }
 
     /**
      * return transaction location for individual transaction
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param transactionno the number used to identify a single transaction
      *
@@ -188,7 +188,7 @@ public class DDADAO {
      */
     public String getTransactionLocation(int transactionno) {
         String transactionlocation = "null";
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement getTransactionloc = connection.createStatement();
                 ResultSet rs = getTransactionloc.executeQuery(
@@ -201,13 +201,13 @@ public class DDADAO {
             }
             return transactionlocation;
         } else {
-            return fakeDBTRANSACTIONS.get(transactionno)[5];
+            return fakeDBTRANSACTIONS.get(transactionno-1)[5];
         }
     }
 
     /**
      * return account number accessed from customer ID
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param customerID the number used to identify an individual customer
      *
@@ -215,7 +215,7 @@ public class DDADAO {
      */
     public int getAccountNo(int customerID) {
         int accountNum = 0;
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement getAccountNum = connection.createStatement();
                 ResultSet rs = getAccountNum.executeQuery(
@@ -227,13 +227,13 @@ public class DDADAO {
             }
             return accountNum;
         } else {
-            return Integer.parseInt(fakeDBACCOUNTS.get(customerID)[0]);
+            return Integer.parseInt(fakeDBACCOUNTS.get(customerID-1)[0]);
         }
     }
 
     /**
      * returns account type for an individual account
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param accountno the number used to identify an individual account
      *
@@ -241,7 +241,7 @@ public class DDADAO {
      */
     public String getAccountType(int accountno) {
         String type = "null";
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement getType = connection.createStatement();
                 ResultSet rs = getType.executeQuery(
@@ -253,13 +253,13 @@ public class DDADAO {
             }
             return type;
         } else {
-            return fakeDBACCOUNTS.get(accountno)[2];
+            return fakeDBACCOUNTS.get(accountno-1)[2];
         }
     }
 
     /**
      * returns customer first name for an individual customer
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param customerID the number used to identify an individual customer
      *
@@ -267,7 +267,7 @@ public class DDADAO {
      */
     public String getCustomerFirst(int customerID) {
         String first = "null";
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement getName = connection.createStatement();
                 ResultSet rs = getName.executeQuery(
@@ -279,13 +279,13 @@ public class DDADAO {
             }
             return first;
         } else {
-            return fakeDBCUSTOMERS.get(customerID)[2];
+            return fakeDBCUSTOMERS.get(customerID-1)[2];
         }
     }
 
     /**
      * returns customer last name for indivdual customer
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param customerID the number used to identify an individual customer
      *
@@ -293,7 +293,7 @@ public class DDADAO {
      */
     public String getCustomerLast(int customerID) {
         String last = "null";
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement getName = connection.createStatement();
                 ResultSet rs = getName.executeQuery(
@@ -305,13 +305,13 @@ public class DDADAO {
             }
             return last;
         } else {
-            return fakeDBCUSTOMERS.get(customerID)[1];
+            return fakeDBCUSTOMERS.get(customerID-1)[1];
         }
     }
 
     /**
      * returns customer address for individual customer
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param customerID the number used to identify an individual customer
      *
@@ -319,7 +319,7 @@ public class DDADAO {
      */
     public String getCustomerAddress(int customerID) {
         String address = "null";
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement getaddress = connection.createStatement();
                 ResultSet rs = getaddress.executeQuery(
@@ -331,13 +331,13 @@ public class DDADAO {
             }
             return address;
         } else {
-            return fakeDBCUSTOMERS.get(customerID)[3];
+            return fakeDBCUSTOMERS.get(customerID-1)[3];
         }
     }
 
     /**
      * adds transaction (with account num, amount, transactiontype, date, and location) to database
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param accountNo the number used to identify an individual account
      * @param amount the amount that the transaction is for (positive or negative to indicate
@@ -347,7 +347,7 @@ public class DDADAO {
      * @param location where the transaction occurred
      */
     public void addTransaction(int accountNo, double amount, String transactiontype, String dateofTran, String location ) {
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement addTransaction = connection.createStatement();
                 addTransaction.execute(
@@ -367,7 +367,7 @@ public class DDADAO {
 
     /**
      * adds advice to a account
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param accountNo the number used to identify an individual account
      * @param amount the amount that the advice is for (positive or negative to indicate
@@ -376,7 +376,7 @@ public class DDADAO {
      * @param dateofAdvice when the advice occurred
      */
     public void addAdvice(int accountNo, double amount, String adviceType, String dateofAdvice) {
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement addAdvice = connection.createStatement();
                 addAdvice.execute(
@@ -396,7 +396,7 @@ public class DDADAO {
 
     /**
      * return list of transactions within specific time range for an individual account
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param accountNo the number used to identify an individual account
      * @param start the start date for the statement time period
@@ -408,7 +408,7 @@ public class DDADAO {
      */
     public ArrayList<String> getTransactionsStatement(int accountNo,  String start, String end) {
         ArrayList<String> transactions = new ArrayList<String>();
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement getTransactions = connection.createStatement();
                 ResultSet rs = getTransactions.executeQuery(
@@ -425,7 +425,7 @@ public class DDADAO {
             }
         } else {
             for (int i = 0; i < fakeDBTRANSACTIONS.size(); i++) {
-                if ( fakeDBTRANSACTIONS.get(i)[1].contentEquals(Integer.toString(accountNo)) && fakeDBTRANSACTIONS.get(i)[4].compareTo(start) < 0 && fakeDBTRANSACTIONS.get(i)[4].compareTo(end) > 0 ) {
+                if (fakeDBTRANSACTIONS.get(i)[1].contentEquals(Integer.toString(accountNo-1)) && fakeDBTRANSACTIONS.get(i)[4].compareTo(start) < 0 && fakeDBTRANSACTIONS.get(i)[4].compareTo(end) > 0 ) {
                     transactions.add(fakeDBTRANSACTIONS.get(i)[4]);
                     transactions.add(fakeDBTRANSACTIONS.get(i)[2]);
                     transactions.add(fakeDBTRANSACTIONS.get(i)[3]);
@@ -438,7 +438,7 @@ public class DDADAO {
 
     /**
      * returns list of advices within a specific time range for an individual account
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param accountNo the number used to identify an individual account
      * @param start the start date for the statement time period
@@ -450,7 +450,7 @@ public class DDADAO {
      */
     public ArrayList<String> getAdviceStatements(int accountNo,  String start, String end) {
         ArrayList<String> advices = new ArrayList<String>();
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement getAdvices = connection.createStatement();
                 ResultSet rs = getAdvices.executeQuery(
@@ -466,10 +466,10 @@ public class DDADAO {
             }
         } else {
             for (int i = 0; i < fakeDBADVICE.size(); i++) {
-                if ( fakeDBADVICE.get(i)[1].contentEquals(Integer.toString(accountNo)) && fakeDBADVICE.get(i)[4].compareTo(start) < 0 && fakeDBADVICE.get(i)[4].compareTo(end) > 0 ) {
-                    advices.add(fakeDBTRANSACTIONS.get(i)[2]);
-                    advices.add(fakeDBTRANSACTIONS.get(i)[3]);
-                    advices.add(fakeDBTRANSACTIONS.get(i)[4]);
+                if ( fakeDBADVICE.get(i)[1].contentEquals(Integer.toString(accountNo-1)) && fakeDBADVICE.get(i)[4].compareTo(start) < 0 && fakeDBADVICE.get(i)[4].compareTo(end) > 0 ) {
+                    advices.add(fakeDBADVICE.get(i)[2]);
+                    advices.add(fakeDBADVICE.get(i)[3]);
+                    advices.add(fakeDBADVICE.get(i)[4]);
                 }
             }
         }
@@ -478,7 +478,7 @@ public class DDADAO {
 
     /**
      *returns the number of checks used within a specific time range for an individual account
-     * @author Katie Wind: fakeDB elements for testing added by Caelum Noonan
+     * @author Katie Wind; fakeDB elements for testing added by Caelum Noonan
      *
      * @param accountno the number used to identify an individual account
      * @param start the start date for the time period to be counted
@@ -488,7 +488,7 @@ public class DDADAO {
      */
     public int countChecks(int accountno, String start, String end) {
         int checkCount = 0;
-        if (useRealDB == true) {
+        if (useRealDB) {
             try {
                 Statement checkCountNum = connection.createStatement();
                 ResultSet rs = checkCountNum.executeQuery(
@@ -501,7 +501,7 @@ public class DDADAO {
             }
         } else {
             for(int i = 0; i < fakeDBTRANSACTIONS.size(); i++) {
-                if (fakeDBTRANSACTIONS.get(i)[3].contains("check")) {
+                if (fakeDBTRANSACTIONS.get(i)[1].contentEquals(Integer.toString(accountno)) && fakeDBTRANSACTIONS.get(i)[3].contains("check")) {
                     checkCount++;
                 }
             }

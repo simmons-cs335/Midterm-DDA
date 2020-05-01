@@ -12,11 +12,12 @@ import java.util.List;
 public class Transaction {
     private int accountNo;
     private DDADAO dao;
-
+    private Advice ad;
 
     public Transaction(int accNo, DDADAO db){
         dao = db;
         accountNo = accNo;
+        ad = new Advice(accountNo, dao);
     }
 
     /**
@@ -32,6 +33,7 @@ public class Transaction {
         dao.addTransaction(accountNo, amount, transactionType, date, location);
         updateBalance(amount);
         checkOverdraft();
+        ad.transactionFee();
     }
 
     /**
@@ -50,7 +52,6 @@ public class Transaction {
      */
     protected void checkOverdraft(){
         if(dao.getBalance(accountNo) < 0){
-            Advice ad = new Advice(accountNo, dao);
             ad.overdraftFee();
         }
     }

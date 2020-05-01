@@ -25,6 +25,7 @@ public class FileParser {
     public ArrayList<ArrayList<String[]>> putDataInOneListForAllFiles() throws FileNotFoundException {
         File dir = new File(pathname);
         ArrayList<ArrayList<String[]>> allFiles = new ArrayList<>();
+
         for (File file : dir.listFiles()) {
             Scanner s = new Scanner(file);
             ArrayList<String[]> tempList = new ArrayList<>();

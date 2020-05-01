@@ -183,7 +183,7 @@ public class Account {
      * @author Abigail PinterParsons
      * @return The current balance of an account
      */
-    public int getBalance() {
+    public double getBalance() {
         return db.getBalance(accountNumber);
     }
 
