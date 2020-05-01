@@ -1,0 +1,30 @@
+create table CUSTOMERS(
+	CustomerID int(11) Not Null primary key auto_increment,
+	LastName varchar(50) Not Null,
+	FirstName varchar(50) Not Null,
+	Address varchar(75) Not Null
+);
+create table ACCOUNTS(
+	AccountNo int(11) NOT NULL primary key auto_increment,
+	CustomerID int(11) Not Null,
+	foreign key (CustomerID) references CUSTOMERS(CustomerID)
+	AccountType varchar(25) Not Null,
+	Balance double
+);
+create table ADVICE (
+	AdviceNo int(11) Not Null primary key auto_increment,
+	AccountNo int(11) Not Null,
+	foreign key (AccountNo) references ACCOUNTS(AccountNo),
+	Amount int(11) Not Null,
+	TypeOfAdvice varchar(25) Not Null,
+	DateOfAdvice varchar(25) Not Null
+);
+create table TRANSACTIONS (
+	TransactionNo int(10) not null primary key auto_increment
+	AccountNo int(11) not null,
+	foreign key (AccountNo) references ACCOUNTS(AccountNo),
+	Amount int(11) not null,
+	TransactionType varchar(25) not null,
+	DateOfTransaction varchar(10) not null,
+	Location varchar(50) not null,
+);
