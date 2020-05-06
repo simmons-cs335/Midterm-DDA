@@ -1,0 +1,6 @@
+Okay I have never written one of these before, so I apologize if this isn't the correct way to use this.
+
+I just wanted to explain why I have a weird amount of tests. I wrote tests for the Transaction class because that was the 
+class I wrote by myself. However, this was the smallest class, so you told me to write a couple tests for a different
+class. This is why I have some tests also written for Advice, but not all. This way I am roughly on par for writing the
+same number of tests as my group mates.
